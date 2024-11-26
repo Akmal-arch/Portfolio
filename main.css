@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
     border: 3px solid #f0bf6c;
     border-radius: 10px;
@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
     border: none;
     box-shadow: none;
@@ -78,7 +78,7 @@ body {
 .banner .container {
     display: flex;
     margin: auto;
-    max-width: 1200px;
+    max-width: 1440px;
 }
 
 .banner .container .content {
@@ -201,8 +201,11 @@ body {
 }
 
 .about .container {
-    width: 1000px;
+    width: 1440px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .about .container h1 {
@@ -210,12 +213,13 @@ body {
     font-size: 40px;
 }
 
+
 .about .container .text {
     position: relative;
 }
 
 .about .container .text p {
-    margin-left: 50px;
+    margin-left: 60px;
     font-size: 20px;
 }
 
@@ -245,7 +249,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     /* Dynamic grid columns */
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1440px;
     /* Set maximum width */
     padding: 20px;
     background-color: #373b41;
@@ -302,7 +306,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 20px auto;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 .portfolio .grid-item {
