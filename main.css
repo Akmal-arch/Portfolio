@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     color: white;
 }
+
 /*Header*/
 .header {
     position: sticky;
@@ -12,6 +13,7 @@ body {
     transition: .5s ease-in-out;
 
 }
+
 .header.scrolled {
     top: 0;
     border-bottom: 4px solid #f0bf6c;
@@ -20,6 +22,7 @@ body {
 
 
 }
+
 .header .container {
     display: flex;
     justify-content: center;
@@ -34,6 +37,7 @@ body {
     transition: .5s ease-in-out;
 
 }
+
 .header .container.scrolled {
     display: flex;
     justify-content: center;
@@ -45,6 +49,7 @@ body {
     transition: .5s ease-in-out;
     padding: 10px 0;
 }
+
 .header .container ul {
     list-style-type: none;
 }
@@ -69,11 +74,13 @@ body {
 .banner {
     margin: 4rem 0;
 }
+
 .banner .container {
     display: flex;
     margin: auto;
     max-width: 1200px;
 }
+
 .banner .container .content {
     flex: 1;
     display: flex;
@@ -81,35 +88,43 @@ body {
     align-items: flex-start;
     flex-direction: column;
 }
+
 .banner .container .content h3 {
     font-size: 25px;
     color: #f0bf6c;
     transition: .3s ease-in-out;
 }
+
 .banner .container .content h3:hover {
     transform: scale(1.05);
     transform: translateY(-5px);
 }
+
 .banner .container .content h1 {
     margin: 0;
     font-size: 50px;
     transition: .3s ease-in-out;
 }
+
 .banner .container .content h1:hover {
     transform: scale(1.05);
     transform: translateY(-5px);
 }
+
 .banner .container .content h1 span {
     color: #f0bf6c;
 }
+
 .banner .container .content p {
     font-size: 20px;
     transition: .3s ease-in-out;
 }
+
 .banner .container .content p:hover {
     transform: scale(1.05);
     transform: translateY(-5px);
 }
+
 .banner .container .content a button {
     border: 2px solid #f0bf6c;
     background: transparent;
@@ -120,6 +135,7 @@ body {
     position: relative;
     transition: .5s ease-in-out all;
 }
+
 .banner .container .content a button::before {
     content: '';
     width: 0;
@@ -132,26 +148,33 @@ body {
     transition: .5s ease-in-out all;
     z-index: -1;
 }
+
 .banner .container .content a button:hover::before {
     width: 100%;
 }
-.banner .container .content a button:hover{
+
+.banner .container .content a button:hover {
     color: white;
 }
+
 .banner .container .photo {
     flex: 1;
 }
+
 .banner .container .photo img {
     width: 100%;
     transition: .3s ease-in-out;
 }
+
 .banner .container .photo img:hover {
     transform: scale(1.05);
     transform: translateY(-5px);
 }
+
 .hand {
     transform: rotate(30deg);
 }
+
 .social-network {
     border: 2px solid #f0bf6c;
     border-radius: 10px;
@@ -161,33 +184,41 @@ body {
     font-size: 50px;
     margin-top: 2rem;
 }
+
 .social-network a {
     color: #f0bf6c;
     margin: 0 1rem;
     transition: .3s ease-in-out;
 }
+
 .social-network a:hover {
     color: #fff;
 }
+
 /*About*/
 .about {
     margin: 5rem 0;
 }
-.about .container{
+
+.about .container {
     width: 1000px;
     margin: auto;
 }
+
 .about .container h1 {
     color: #f0bf6c;
     font-size: 40px;
 }
+
 .about .container .text {
     position: relative;
 }
+
 .about .container .text p {
     margin-left: 50px;
     font-size: 20px;
 }
+
 .about .container .text span {
     position: absolute;
     width: 45px;
@@ -204,15 +235,17 @@ body {
     font-size: 2rem;
     color: #f5f5f5;
 }
+
 .skills {
     margin-bottom: 4rem;
 }
+
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     /* Dynamic grid columns */
     gap: 20px;
-    max-width: 800px;
+    max-width: 1000px;
     /* Set maximum width */
     padding: 20px;
     background-color: #373b41;
@@ -253,3 +286,72 @@ body {
 }
 
 /* Skills end */
+
+/* portfolio*/
+.portfolio .portfolio-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio h1 {
+    margin-bottom: 30px;
+}
+
+.portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.portfolio .grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.portfolio .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.portfolio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio .grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio button {
+    padding: 15px 35px;
+    background-color: transparent;
+    border: 2px solid #f0bf6c;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.portfolio button:hover {
+    background-color: #f0bf6c;
+}
+
+.portfolio .view-more {
+    margin-top: 20px;
+}
