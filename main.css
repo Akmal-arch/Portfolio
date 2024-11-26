@@ -168,7 +168,35 @@ body {
 }
 .social-network a:hover {
     color: #fff;
-} 
+}
+/*About*/
+.about {
+    margin: 5rem 0;
+}
+.about .container{
+    width: 1000px;
+    margin: auto;
+}
+.about .container h1 {
+    color: #f0bf6c;
+    font-size: 40px;
+}
+.about .container .text {
+    position: relative;
+}
+.about .container .text p {
+    margin-left: 50px;
+    font-size: 20px;
+}
+.about .container .text span {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background-color: #f0bf6c;
+    left: 0;
+    top: 10px;
+}
+
 /* Skills */
 .skills h1 {
     text-align: center;
