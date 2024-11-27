@@ -22,6 +22,29 @@ body {
     box-sizing: border-box;
 }
 
+/* Dots*/
+.dots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 200px;
+    position: absolute;
+}
+.dots >span {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.dots .main {
+    opacity: 70%;
+}
+.dots .secondary {
+    opacity: 50%;
+    background: none;
+    border: 2px solid var(--primary-color);
+}
+
 /* Header */
 .header {
     position: sticky;
@@ -47,15 +70,15 @@ body {
     border: 3px solid var(--primary-color);
     border-radius: 10px;
     box-shadow: 5px 5px 8px var(--primary-color);
-    padding: 10px;
-    margin-top: 16px;
+    padding: 0.6rem;
+    margin-top: 1rem;
     transition: .5s ease-in-out;
 }
 
 .header .container.scrolled {
     border: none;
     box-shadow: none;
-    padding: 10px 0;
+    padding: .6rem 0;
 }
 
 .header .container ul {
@@ -64,13 +87,13 @@ body {
 
 .header .container ul li {
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 1.5rem;
 }
 
 .header .container ul li a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 1.25rem;
     transition: .3s ease-in-out;
 }
 
@@ -81,8 +104,13 @@ body {
 /* Banner */
 .banner {
     padding: 1rem;
+    margin: 2rem 0;
+    position: relative;
 }
-
+.banner .dots {
+    top: 20%;
+    right: 0;
+}
 .banner .container {
     display: flex;
     margin: auto;
@@ -98,16 +126,16 @@ body {
 }
 
 .banner .container .content h3 {
-    font-size: 25px;
+    font-size: 1.5rem;
     color: var(--primary-color);
     transition: .3s ease-in-out;
     margin: 0;
 }
 
 .banner .container .content h1 {
-    font-size: 46px;
+    font-size: 2.8rem;
     line-height: 120%;
-    margin: 10px 0;
+    margin: .6rem 0;
     transition: .3s ease-in-out;
 }
 
@@ -116,16 +144,16 @@ body {
 }
 
 .banner .container .content p {
-    font-size: 20px;
+    font-size: 1.25rem;
     transition: .3s ease-in-out;
 }
 .banner .container .content a button {
     border: 2px solid var(--primary-color);
     background: transparent;
     color: var(--primary-color);
-    padding: 15px 30px;
+    padding: 1rem 1.8rem;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 1.1rem;
     position: relative;
     transition: .5s ease-in-out all;
 }
@@ -164,30 +192,45 @@ body {
     transform: rotate(30deg);
 }
 
-.social-network {
+.banner .social-network {
     border: 2px solid var(--primary-color);
     border-radius: 10px;
     width: fit-content;
     margin: auto;
-    padding: 10px 20px;
-    font-size: 50px;
+    display: flex;
+    gap: 2rem;
+    padding: .6rem 1.25rem;
+    font-size: 3.1rem;
 }
 
-.social-network a {
+.banner .social-network a {
     color: var(--primary-color);
-    margin: 0 1rem;
     transition: .3s ease-in-out;
 }
 
-.social-network a:hover {
+.banner .social-network a:hover {
     color: var(--hover-color);
+}
+@media(max-width: 1000px){
+    .banner .container {
+        flex-direction: column;
+    }
+    .banner h1 {
+        font-size: 0px;
+    }
+    .banner h3 {
+        font-size: 18px;
+    }
+    .banner p {
+        font-size: 1rem;
+    }
 }
 
 /* About */
 .about {
     padding: 3rem 1rem;
+    position: relative;
 }
-
 .about .container {
     width: 100%;
     max-width: 1440px;
@@ -200,7 +243,7 @@ body {
 
 .about .container h1 {
     color: var(--primary-color);
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .about .container .text {
@@ -209,29 +252,29 @@ body {
 
 .about-span {
     background-color: var(--primary-color);
-    width: 50px;
+    width: 3.1rem;
     height: 3px;
     border-radius: 10px;
     position: absolute;
-    top: 8px;
-    left: -55px;
+    top: .5rem;
+    left: -3.2rem;
 }
 
 .about .container .text p {
-    margin-left: 60px;
-    font-size: 23px;
+    margin-left: 3.75rem;
+    font-size: 1.3rem;
     position: relative;
 }
 
 .about .container .text .learn-more {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 1.25rem;
+    padding: .6rem 1.25rem;
     border: 2px solid var(--primary-color);
     background-color: transparent;
     color: var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.25rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -279,14 +322,18 @@ body {
 .skills {
     margin-bottom: 4rem;
     padding: 0 1rem;
+    position: relative;
 }
-
+.skills .dots {
+    top: 0;
+    right: 0;
+}
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-    max-width: 1440px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    max-width: 1200px;
+    padding: 1.25rem;
     background-color: #373b41;
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--shadow-color);
@@ -300,7 +347,7 @@ body {
     align-items: center;
     background-color: var(--card-background);
     border-radius: 10px;
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -312,31 +359,38 @@ body {
 }
 
 .skills .card img {
-    width: 50%;
-    margin-bottom: 10px;
+    width: 130px;
+    margin-bottom: .6rem;
 }
 
 .skills .card span {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--text-color);
-    margin-top: 5px;
+    margin-top: .3rem;
 }
 
 /* Portfolio */
+.portfolio {
+    position: relative;
+}
+.portfolio .dots {
+    top: 0;
+    left: 0;
+}
 .portfolio .portfolio-container {
     text-align: center;
     padding: 2rem 1rem;
 }
 
 .portfolio h1 {
-    margin-bottom: 30px;
+    margin-bottom: 1.8rem;
 }
 
 .portfolio .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    gap: 10px;
-    margin: 20px auto;
+    gap: .6rem;
+    margin: 1.25rem auto;
     max-width: 1000px;
 }
 
@@ -348,9 +402,9 @@ body {
 
 .portfolio .grid-item img {
     width: 100%;
-    height: auto;
-    display: block;
     border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .portfolio .overlay {
@@ -374,7 +428,7 @@ body {
 }
 
 .portfolio button {
-    padding: 15px 35px;
+    padding: 1rem 2.18rem;
     background-color: transparent;
     border: 2px solid var(--primary-color);
     color: var(--hover-color);
@@ -382,7 +436,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: .3s ease-in-out;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .portfolio button:hover {
@@ -390,12 +444,12 @@ body {
 }
 
 .portfolio .view-more {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 /* General Styles for Footer */
 #footer__section {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .footer__container {
@@ -406,21 +460,21 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .submit__sms {
-    flex: 1 1 300px;
+    flex: 1 1 18.75rem;
     /* Flexible box with minimum width of 300px */
 }
 
 .submit__sms textarea {
     width: 100%;
-    height: 250px;
+    height: 15.6rem;
     resize: none;
     outline: none;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 1.25rem;
+    padding: .6rem;
     border-radius: 10px;
     background-color: #444851;
     color: white;
@@ -430,11 +484,11 @@ body {
 .submit__sms button {
     background-color: #444851;
 
-    padding: 15px 30px;
+    padding: 1rem 1.8rem;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     color:#f0bf6c ;
-    margin-top: 10px;
+    margin-top: .6rem;
 }
 
 .submit__sms button:hover {
@@ -448,20 +502,20 @@ footer .social__media {
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
-    flex: 1 1 300px;
+    gap: .6rem;
+    flex: 1 1 18.75rem;
     /* Flexible box with minimum width of 300px */
 }
 
 footer .social {
-    min-width: 300px;
+    min-width: 18.75rem;
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     color: white;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 1.25rem;
+    padding: .6rem;
     margin-bottom: 5px;
     border: 2px solid var(--primary-color);
     border-radius: 5px;
@@ -475,15 +529,15 @@ footer .social:hover {
 
 /* Footer Line and Text */
 .footer__line {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     height: 2px;
     background-color: var(--primary-color);
 }
 
 .footer__text {
     text-align: center;
-    font-size: 25px;
-    padding-top: 10px;
+    font-size: 1.5rem;
+    padding-top: .6rem;
     color: var(--primary-color);
 }
 
@@ -506,11 +560,12 @@ footer .social:hover {
     }
 }
 
-
-/* Footer*/
 @media (max-width: 576px) {
     .container {
         max-width: 540px;
+    }
+    html {
+        font-size: 11px;
     }
 
 }
@@ -518,6 +573,9 @@ footer .social:hover {
 @media (max-width: 768px) {
     .container {
         max-width: 720px;
+    }
+    html {
+        font-size: 12px;
     }
 
 }
@@ -530,6 +588,9 @@ footer .social:hover {
     .about .container img {
         width: 50%;
     }
+    html {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -541,5 +602,8 @@ footer .social:hover {
 @media (max-width: 1400px) {
     .container {
         max-width: 1320px;
+    }
+    html {
+        font-size: 16px;
     }
 }
